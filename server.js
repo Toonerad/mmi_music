@@ -3,6 +3,7 @@ const yt = require('ytdl-core');
 const { TOKEN, PREFIX, ADMINID, PASSES } = require('./config');
 const client = new Client();
 
+
 let queue = {};
 
 const commands = {
@@ -94,4 +95,8 @@ client.on('message', msg => {
 	if (!msg.content.startsWith(PREFIX)) return;
 	if (commands.hasOwnProperty(msg.content.toLowerCase().slice(PREFIX.length).split(' ')[0])) commands[msg.content.toLowerCase().slice(PREFIX.length).split(' ')[0]](msg);
 });
+
+
+client.user.setPresence({ game: { name: "Dev: Lucas", type: 1}});
+
 client.login(TOKEN);
