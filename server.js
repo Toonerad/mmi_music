@@ -89,6 +89,7 @@ const commands = {
 
 client.on('ready', () => {
 	console.log('ready!');
+	client.user.setGame('Dev: Lucas');
 });
 
 client.on('message', msg => {
@@ -96,7 +97,5 @@ client.on('message', msg => {
 	if (commands.hasOwnProperty(msg.content.toLowerCase().slice(PREFIX.length).split(' ')[0])) commands[msg.content.toLowerCase().slice(PREFIX.length).split(' ')[0]](msg);
 });
 
-
-client.user.setGame('Dev: Lucas')
 
 client.login(TOKEN);
