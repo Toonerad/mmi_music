@@ -89,7 +89,7 @@ const commands = {
 
 client.on('ready', () => {
 	console.log('ready!');
-	client.user.setPresence({ game: { name: "Dev: Lucas", type: 1}});
+	client.user.setGame("Dev: Lucas");
 });
 
 client.on('message', msg => {
