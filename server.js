@@ -97,6 +97,6 @@ client.on('message', msg => {
 });
 
 
-client.user.setPresence({ game: { name: "Dev: Lucas", type: 1}});
+client.user.setPresence({ status: 'online', game: { name: 'Dev: Lucas' } });
 
 client.login(TOKEN);
